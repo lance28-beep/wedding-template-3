@@ -162,7 +162,7 @@ export default function Home() {
               className="opacity-80"
             />
           </div>
-          <TypingEffect messages={["Finally! About time, right","We are getting married.", "You are invited.","Save the date","You're part of our story","Happily ever after starts here","Witness our \"I do\""]} />
+          <TypingEffect messages={["Finally! About time, right", "We are getting married.", "You are invited.", "Save the date", "You're part of our story", "Happily ever after starts here", "Witness our \"I do\""]} />
           <h1 className="text-6xl md:text-7xl font-great-vibes mb-6">{couple.coupleNameDisplay}</h1>
           <div className="flex flex-col items-center space-y-4 mb-8">
             <div className="flex items-center space-x-1 text-sm md:text-2xl font-light">
@@ -215,7 +215,7 @@ export default function Home() {
             width={600}
             height={400}
             className="w-[90vw] max-w-lg sm:max-w-xl md:max-w-xs lg:max-w-sm h-auto opacity-90 drop-shadow-xl md:opacity-80 md:w-64 md:max-w-[18rem] lg:w-80 lg:max-w-xs"
-            style={{objectFit: 'contain'}}
+            style={{ objectFit: 'contain' }}
             priority={false}
             aria-hidden="true"
           />
@@ -364,6 +364,7 @@ export default function Home() {
 
       {/* Couple Story Timeline */}
       <section id="story" className="py-20 bg-white">
+
         <div className="container mx-auto px-4">
           <h2 className="text-rose-600 text-4xl text-3xl md:text-5xl font-great-vibes text-center mb-6">Our Love Story</h2>
           <p className="text-center text-gray-700 max-w-2xl mx-auto mb-16">
@@ -377,7 +378,12 @@ export default function Home() {
       {/* Video Section */}
       <section id="video" className="py-20 bg-rose-50/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-great-vibes text-center mb-16">Our Prenup Video</h2>
+          <h2 className="text-3xl md:text-5xl font-great-vibes text-center mb-6">Our Prenup Video</h2>
+          <p className="text-center text-gray-700 max-w-2xl mx-auto mb-12">
+            Watch our prenup video to see our journey and the love we share. These videos capture special moments
+            leading up to our wedding day, showcasing our connection and the beautiful locations where our love story
+            unfolded.
+          </p>
           <VideoSection />
         </div>
       </section>

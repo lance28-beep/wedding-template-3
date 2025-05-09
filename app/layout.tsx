@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { AudioProvider } from "@/components/audio-context"
 import { getWeddingMetadata, getWebsiteConfig } from "@/lib/config-utils"
 
 const inter = Inter({
@@ -20,7 +21,7 @@ export default function RootLayout({
   const { fonts } = getWebsiteConfig()
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -30,8 +31,15 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} font-sans`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-          {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          <AudioProvider>
+            {children}
+          </AudioProvider>
         </ThemeProvider>
       </body>
     </html>

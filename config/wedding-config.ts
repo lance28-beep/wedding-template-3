@@ -147,7 +147,7 @@ export const loveStoryEvents = [
     title: "First Meeting",
     description:
       "We first met at a mutual friend's birthday party. Lance spilled his drink on Rosa's dress, and that's how our conversation started. What began as an awkward apology turned into hours of laughter and connection.",
-    image: "/images/story-1.jpg",
+    image: "/img/firstMeeting.png",
     location: "Skyline Rooftop Bar",
     color: "bg-pink-100 text-pink-600",
   },
@@ -156,7 +156,7 @@ export const loveStoryEvents = [
     title: "First Date",
     description:
       "Our first date was at a small coffee shop downtown. We talked for hours and didn't realize how much time had passed. The barista had to politely let us know they were closing. We walked through the park afterward, not wanting the evening to end.",
-    image: "/images/story-2.jpg",
+    image: "/img/first_Date.png",
     location: "Brew & Bean Café",
     color: "bg-amber-100 text-amber-600",
   },
@@ -165,7 +165,7 @@ export const loveStoryEvents = [
     title: "Moving In Together",
     description:
       "After dating for over a year, we decided to take the next step and move in together. It was a big decision that brought us even closer. Combining our furniture was a challenge, but creating our first home together was worth every moment of compromise.",
-    image: "/images/story-3.jpg",
+    image: "/img/moving_together.png",
     location: "Our First Apartment",
     color: "bg-blue-100 text-blue-600",
   },
@@ -174,7 +174,7 @@ export const loveStoryEvents = [
     title: "The Proposal",
     description:
       "Lance proposed during our vacation in Bali. It was sunset, and we were walking along the beach when he got down on one knee. The ring was hidden in a seashell he asked Rosa to pick up. She was completely surprised and of course said yes!",
-    image: "/images/story-4.jpg",
+    image: "/img/proposal.png",
     location: "Uluwatu Beach, Bali",
     color: "bg-violet-100 text-violet-600",
   },
@@ -183,7 +183,7 @@ export const loveStoryEvents = [
     title: "Wedding Day",
     description:
       "The day we've been waiting for! We're excited to celebrate our love with family and friends at Sunset Gardens. We've planned every detail to reflect our journey together and create memories that will last a lifetime.",
-    image: "/images/story-5.jpg",
+    image: "/img/wedding_day.png",
     location: "Sunset Gardens",
     color: "bg-rose-100 text-rose-600",
   },
