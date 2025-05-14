@@ -11,7 +11,7 @@ import FAQ from "@/components/faq"
 import QRCodeSection from "@/components/qr-code-section"
 import MusicPlayer from "@/components/music-player"
 import CoupleStory from "@/components/couple-story"
-import VideoSection from "@/components/video-section"
+import PrenupVideo from "@/components/prenup-video"
 import Particles from "@/components/Particles"
 import { ArrowDown, Calendar, Clock, MapPin } from "lucide-react"
 import { getCouple, getWeddingDetails, getWebsiteConfig } from "@/lib/config-utils"
@@ -364,7 +364,6 @@ export default function Home() {
 
       {/* Couple Story Timeline */}
       <section id="story" className="py-20 bg-white">
-
         <div className="container mx-auto px-4">
           <h2 className="text-rose-600 text-4xl text-3xl md:text-5xl font-great-vibes text-center mb-6">Our Love Story</h2>
           <p className="text-center text-gray-700 max-w-2xl mx-auto mb-16">
@@ -375,23 +374,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section id="video" className="py-20 bg-rose-50/50">
+      {/* Prenup Video Section */}
+      <section id="prenup" className="py-20 bg-rose-50/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-great-vibes text-center mb-6">Our Prenup Video</h2>
+          <h2 className="text-rose-600 text-4xl md:text-5xl font-great-vibes text-center mb-6">Our Prenup Video</h2>
           <p className="text-center text-gray-700 max-w-2xl mx-auto mb-12">
-            Watch our prenup video to see our journey and the love we share. These videos capture special moments
-            leading up to our wedding day, showcasing our connection and the beautiful locations where our love story
-            unfolded.
+            Watch our prenup video to see our journey and the love we share. These moments capture our connection
+            and the beautiful locations where our love story unfolded.
           </p>
-          <VideoSection />
+          <PrenupVideo />
         </div>
       </section>
 
       {/* Wedding Party Section */}
       <section id="wedding-party" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-great-vibes text-center mb-16">Wedding Party</h2>
+          <h2 className="text-rose-600 text-4xl md:text-5xl font-great-vibes text-center mb-16">Wedding Party</h2>
           <WeddingParty />
         </div>
       </section>

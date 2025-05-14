@@ -1,3 +1,5 @@
+import type { WeddingConfig } from "@/types/wedding-config"
+
 /**
  * Wedding Configuration
  *
@@ -8,33 +10,65 @@
 // Couple Information
 export const couple = {
   partner1: {
-    firstName: "Lance",
+    firstName: "Daniel",
     lastName: "Padilla",
-    fullName: "Lance Padilla",
-    email: "lance@example.com",
+    fullName: "Daniel Padilla",
+    email: "daniel@example.com",
     phone: "+1 (555) 123-4567",
-    bio: "Lance is a software engineer who loves hiking and playing guitar. He's known for his sense of humor and making Rosa laugh every day.",
+    bio: "Daniel John Elago Ford, known professionally as Daniel Padilla, is a Filipino actor and singer. He is a recipient of multiple accolades across television, film, and music, including the FAMAS Award for Best Actor and PMPC Star Award for Movie Actor of the Year, as well as three World Music Awards nominations.",
     image: "/img/groom.png",
     role: "Groom",
   },
   partner2: {
-    firstName: "Rosa",
-    lastName: "Smith",
-    fullName: "Rosa Smith",
-    email: "rosa@example.com",
+    firstName: "Kathryn",
+    lastName: "Bernardo",
+    fullName: "Kathryn Bernardo",
+    email: "kathryn@example.com",
     phone: "+1 (555) 987-6543",
-    bio: "Rosa is an interior designer with a passion for art and travel. Her creativity and warmth bring joy to everyone around her.",
+    bio: "She is the youngest of four siblings and was raised by her parents, Luzviminda and Teodore Bernardo. Initially, Bernardo was raised as a member of Iglesia ni Cristo. However, it is believed that she converted to born again around 2016",
     image: "/img/bride.png",
     role: "Bride",
   },
   // For display in various places (e.g., "Lance & Rosa")
-  coupleNameDisplay: "Lance & Rosa",
+  coupleNameDisplay: "Daniel & Kathryn",
   // For more formal displays (e.g., "Lance Johnson & Rosa Smith")
-  coupleFullNameDisplay: "Lance Johnson & Rosa Smith",
+  coupleFullNameDisplay: "Daniel Padilla & Kathryn Bernardo",
   // For possessive forms (e.g., "Lance & Rosa's Wedding")
-  coupleNamePossessive: "Lance & Rosa's",
+  coupleNamePossessive: "Daniel & Kathryn's",
   // Hashtag for social media
-  hashtag: "#LanceAndRosa2024",
+  hashtag: "#DanielAndKathryn2024",
+}
+
+// Parents Information
+export const parents = {
+  groomParents: {
+    father: {
+      name: "Rommel Padilla",
+      role: "Father of the Groom",
+      image: "/images/groom-father.jpg",
+      relationship: "Father",
+    },
+    mother: {
+      name: "Karla Estrada",
+      role: "Mother of the Groom",
+      image: "/images/groom-mother.jpg",
+      relationship: "Mother",
+    },
+  },
+  brideParents: {
+    father: {
+      name: "James Doe",
+      role: "Father of the Bride",
+      image: "/images/bride-father.jpg",
+      relationship: "Father",
+    },
+    mother: {
+      name: "Elizabeth Doe",
+      role: "Mother of the Bride",
+      image: "/images/bride-mother.jpg",
+      relationship: "Mother",
+    },
+  },
 }
 
 // Wedding Details
@@ -117,10 +151,10 @@ export const registryConfig = {
   paymentOptions: [
     {
       name: "GCash",
-      logo: "/images/gcash-logo.png",
+      logo: "/img/gcashLogo.png",
       accountName: "Lance Johnson",
       accountNumber: "0917 123 4567",
-      QRimage: "/image/gcash-QR",
+      QRimage: "/images/QRlogo.png",
     },
     {
       name: "Bank Transfer",
@@ -134,7 +168,7 @@ export const registryConfig = {
       logo: "/images/paymaya-logo.png",
       accountName: "Lance Johnson",
       accountNumber: "0917 987 6543",
-      QRimage: "/image/Maya-QR",
+      QRimage: "/img/mayalogo.png",
     },
   ],
   thankYouMessage: "Thank you for your generosity and for celebrating this special day with us.",
@@ -193,56 +227,198 @@ export const loveStoryEvents = [
 export const weddingParty = {
   brideParty: [
     {
-      name: "Emma Johnson",
+      name: "Sarah Johnson",
       role: "Maid of Honor",
-      image: "/images/bridesmaid-1.jpg",
-      relationship: "Sister of the Bride",
+      image: "/img/bridesmade.png",
+      relationship: "Jane's sister and closest confidante",
     },
     {
-      name: "Olivia Smith",
+      name: "Emily Wilson",
       role: "Bridesmaid",
-      image: "/images/bridesmaid-2.jpg",
-      relationship: "Childhood Friend",
+      image: "/img/woman.png",
+      relationship: "Best friend from art school",
     },
     {
-      name: "Sophia Williams",
+      name: "Jessica Taylor",
       role: "Bridesmaid",
-      image: "/images/bridesmaid-3.jpg",
-      relationship: "College Roommate",
+      image: "/img/woman.png",
+      relationship: "Cousin and childhood friend",
     },
     {
-      name: "Isabella Brown",
+      name: "Roselyn Padilla",
       role: "Bridesmaid",
-      image: "/images/bridesmaid-4.jpg",
-      relationship: "Cousin",
+      image: "/img/woman.png",
+      relationship: "Cousin and childhood friend",
+    },
+    {
+      name: "Emily Wilson",
+      role: "Bridesmaid",
+      image: "/img/woman.png",
+      relationship: "Best friend from art school",
+    },
+    {
+      name: "Jessica Taylor",
+      role: "Bridesmaid",
+      image: "/img/woman.png",
+      relationship: "Cousin and childhood friend",
+    },
+    {
+      name: "Roselyn Padilla",
+      role: "Bridesmaid",
+      image: "/img/woman.png",
+      relationship: "Cousin and childhood friend",
     },
   ],
   groomParty: [
     {
-      name: "James Davis",
+      name: "Michael Brown",
       role: "Best Man",
-      image: "/images/groomsman-1.jpg",
-      relationship: "Brother of the Groom",
+      image: "/img/bestman.png",
+      relationship: "John's best friend since college",
     },
     {
-      name: "William Miller",
+      name: "David Lee",
       role: "Groomsman",
-      image: "/images/groomsman-2.jpg",
-      relationship: "Childhood Friend",
+      image: "/img/man.png",
+      relationship: "College roommate",
     },
     {
-      name: "Benjamin Wilson",
+      name: "Richard Wilson",
       role: "Groomsman",
-      image: "/images/groomsman-3.jpg",
-      relationship: "College Roommate",
+      image: "/img/man.png",
+      relationship: "Childhood friend",
     },
     {
-      name: "Lucas Moore",
+      name: "Richard Wilson",
       role: "Groomsman",
-      image: "/images/groomsman-4.jpg",
-      relationship: "Cousin",
+      image: "/img/man.png",
+      relationship: "Childhood friend",
+    },
+    {
+      name: "Richard Wilson",
+      role: "Groomsman",
+      image: "/img/man.png",
+      relationship: "Childhood friend",
+    },
+    
+    {
+      name: "Richard Wilson",
+      role: "Groomsman",
+      image: "/img/man.png",
+      relationship: "Childhood friend",
+    },
+    
+    {
+      name: "Richard Wilson",
+      role: "Groomsman",
+      image: "/img/man.png",
+      relationship: "Childhood friend",
     },
   ],
+  bearers: {
+    ringBearer: {
+      name: "Tommy Wilson",
+      role: "Ring Bearer",
+      image: "/images/ring-bearer.jpg",
+      relationship: "The groom's nephew",
+    },
+    coinBearer: {
+      name: "Jimmy Parker",
+      role: "Coin Bearer",
+      image: "/images/coin-bearer.jpg",
+      relationship: "The bride's nephew",
+    },
+    bibleBearer: {
+      name: "Billy Thompson",
+      role: "Bible Bearer",
+      image: "/images/bible-bearer.jpg",
+      relationship: "The groom's cousin",
+    },
+  },
+  flowerGirls: [
+    {
+      name: "Lily Anderson",
+      role: "Flower Girl",
+      image: "/images/flower-girl-1.jpg",
+      relationship: "The bride's niece",
+    },
+    {
+      name: "Rose Martinez",
+      role: "Flower Girl",
+      image: "/images/flower-girl-2.jpg",
+      relationship: "The groom's niece",
+    },
+  ],
+  sponsors: {
+    veil: [
+      {
+        name: "Thomas Anderson",
+        role: "Veil Sponsor",
+        image: "/images/veil-sponsor-1.jpg",
+        relationship: "Family friend",
+      },
+      {
+        name: "Margaret Anderson",
+        role: "Veil Sponsor",
+        image: "/images/veil-sponsor-2.jpg",
+        relationship: "Family friend",
+      },
+    ],
+    cord: [
+      {
+        name: "Robert Wilson",
+        role: "Cord Sponsor",
+        image: "/images/cord-sponsor-1.jpg",
+        relationship: "Uncle of the groom",
+      },
+      {
+        name: "Patricia Wilson",
+        role: "Cord Sponsor",
+        image: "/images/cord-sponsor-2.jpg",
+        relationship: "Aunt of the groom",
+      },
+    ],
+    candle: [
+      {
+        name: "William Taylor",
+        role: "Candle Sponsor",
+        image: "/images/candle-sponsor-1.jpg",
+        relationship: "Uncle of the bride",
+      },
+      {
+        name: "Catherine Taylor",
+        role: "Candle Sponsor",
+        image: "/images/candle-sponsor-2.jpg",
+        relationship: "Aunt of the bride",
+      },
+    ],
+    principal: [
+      {
+        name: "Thomas Anderson",
+        role: "Principal Sponsor",
+        image: "/images/principal-sponsor-1.jpg",
+        relationship: "Godfather, Mentor and family friend",
+      },
+      {
+        name: "Margaret Anderson",
+        role: "Principal Sponsor",
+        image: "/images/principal-sponsor-2.jpg",
+        relationship: "Godmother, Family friend and spiritual guide",
+      },
+      {
+        name: "William Taylor",
+        role: "Principal Sponsor",
+        image: "/images/principal-sponsor-3.jpg",
+        relationship: "Godfather, Business mentor",
+      },
+      {
+        name: "Patricia Taylor",
+        role: "Principal Sponsor",
+        image: "/images/principal-sponsor-4.jpg",
+        relationship: "Godmother",
+      },
+    ],
+  },
 }
 
 // FAQ Questions
@@ -486,8 +662,9 @@ export const galleryImages = [
 ]
 
 // Export a default config object with all configurations
-const weddingConfig = {
+const weddingConfig: WeddingConfig = {
   couple,
+  parents,
   weddingDetails,
   rsvpConfig,
   registryConfig,

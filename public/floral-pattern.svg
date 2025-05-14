@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="floral" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M50 20C45 20 40 25 40 30C40 35 45 40 50 40C55 40 60 35 60 30C60 25 55 20 50 20Z" fill="currentColor" opacity="0.1"/>
+      <path d="M30 50C25 50 20 55 20 60C20 65 25 70 30 70C35 70 40 65 40 60C40 55 35 50 30 50Z" fill="currentColor" opacity="0.1"/>
+      <path d="M70 50C65 50 60 55 60 60C60 65 65 70 70 70C75 70 80 65 80 60C80 55 75 50 70 50Z" fill="currentColor" opacity="0.1"/>
+      <path d="M50 80C45 80 40 85 40 90C40 95 45 100 50 100C55 100 60 95 60 90C60 85 55 80 50 80Z" fill="currentColor" opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect width="100" height="100" fill="url(#floral)"/>
+</svg> 

@@ -110,6 +110,7 @@ export function getWeddingMetadata() {
   return {
     title: websiteConfig.title,
     description: websiteConfig.description,
+    metadataBase: 'https://lanceandrosa.com',
     openGraph: {
       title: websiteConfig.title,
       description: websiteConfig.description,
@@ -123,4 +124,12 @@ export function getWeddingMetadata() {
       ],
     },
   }
+}
+
+/**
+ * Get the parents information
+ * @returns The parents information
+ */
+export function getParents() {
+  return weddingConfig.parents
 }
